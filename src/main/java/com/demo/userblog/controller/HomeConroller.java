@@ -21,7 +21,7 @@ public class HomeConroller {
     @RequestMapping(value = "screen", method = RequestMethod.GET)
     public String getHomeScreen(){
         homeService.print();
-        screenService.setScreenName("Sai Santhosh");
+        screenService.setScreenName("Sai Santhosh Konduri");
         System.out.println(screenService.getScreenName());
         return "Hello World Sai Santhosh!!";
     }
