@@ -9,7 +9,7 @@ public class ScreenService implements ServiceImpl {
     String screenName = null;
 
     public void print(){
-        System.out.println("I am in ScreenService class");
+        System.out.println("I am in the ScreenService class");
     }
     @Override
     public void setScreenName(String name) {
