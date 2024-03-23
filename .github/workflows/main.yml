@@ -34,7 +34,7 @@ jobs:
           SPRING_PROFILES_ACTIVE="prod"
         elif [[ ${{ github.ref }} == 'refs/heads/develop' ]]; then
           SPRING_PROFILES_ACTIVE="dev"
-        elif [[ "${{ github.ref }}" == refs/heads/feature/* ]]; then
+        elif [[ ${{ github.ref }} == 'refs/heads/feature/*' ]]; then
           SPRING_PROFILES_ACTIVE="dev"
         else
           SPRING_PROFILES_ACTIVE="default"
