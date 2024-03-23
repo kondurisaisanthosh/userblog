@@ -1,7 +1,2 @@
 server:
   port: 8081
-
-spring:
-  application:
-    welcomeMessage: Welcome to development
-    XApiKey: dev-123
