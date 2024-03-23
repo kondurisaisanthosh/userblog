@@ -39,8 +39,6 @@ jobs:
         else
           SPRING_PROFILES_ACTIVE="default"
         fi
-        echo $SPRING_PROFILES_ACTIVE
-        echo docker build --build-arg SPRING_PROFILES_ACTIVE=$SPRING_PROFILES_ACTIVE -t ${{ secrets.DOCKERHUB_USERNAME }}/userblog:${{ github.run_number }} .
         docker build --build-arg SPRING_PROFILES_ACTIVE=$SPRING_PROFILES_ACTIVE -t ${{ secrets.DOCKERHUB_USERNAME }}/userblog:${{ github.run_number }} .
 
     - name: Push Docker image to Docker Hub
