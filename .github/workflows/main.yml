@@ -31,16 +31,12 @@ jobs:
     - name: Build Docker image
       run: |
         if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
-          echo "prod"
           SPRING_PROFILES_ACTIVE="prod"
         elif [[ ${{ github.ref }} == 'refs/heads/develop' ]]; then
-          echo "dev"
           SPRING_PROFILES_ACTIVE="dev"
         elif [[ ${{ github.ref }} == 'refs/heads/feature/*' ]]; then
-          echo "feature-dev"
           SPRING_PROFILES_ACTIVE="dev"
         else
-          echo "default"
           SPRING_PROFILES_ACTIVE="default"
         fi
         echo $SPRING_PROFILES_ACTIVE
