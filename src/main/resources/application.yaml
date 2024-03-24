@@ -1,3 +1,14 @@
 spring:
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:default}
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  file.name: logs/application-debug.log
+  level:
+    root: info
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss}){green} %clr([%level]){magenta} %c{1.} [%t] - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%level] %c{1.} [%t] - %msg%n'
